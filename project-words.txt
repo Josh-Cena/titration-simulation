@@ -1,6 +1,7 @@
-xmin
+pnpm
 xmax
-ymin
-ymax
+xmin
 xticks
+ymax
+ymin
 yticks
