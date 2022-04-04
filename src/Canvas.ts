@@ -52,20 +52,35 @@ export class Canvas {
   }
 
   public drawBox(): void {
-    const {xmin, xmax, ymin, ymax} = this;
-    this.drawCurve([xmin, xmax, xmax, xmin, xmin], [ymin, ymin, ymax, ymax, ymin]);
+    const { xmin, xmax, ymin, ymax } = this;
+    this.drawCurve(
+      [xmin, xmax, xmax, xmin, xmin],
+      [ymin, ymin, ymax, ymax, ymin],
+    );
   }
 
   public drawTicks(): void {
     this.xticks.forEach((x) => {
-      this.ctx.moveTo(((x - this.xmin) / (this.xmax - this.xmin)) * this.width, this.height);
-      this.ctx.lineTo(((x - this.xmin) / (this.xmax - this.xmin)) * this.width, this.height - 5);
+      this.ctx.moveTo(
+        ((x - this.xmin) / (this.xmax - this.xmin)) * this.width,
+        this.height,
+      );
+      this.ctx.lineTo(
+        ((x - this.xmin) / (this.xmax - this.xmin)) * this.width,
+        this.height - 5,
+      );
       this.ctx.stroke();
     });
 
     this.yticks.forEach((y) => {
-      this.ctx.moveTo(0, ((this.ymax - y) / (this.ymax - this.ymin)) * this.height);
-      this.ctx.lineTo(5, ((this.ymax - y) / (this.ymax - this.ymin)) * this.height);
+      this.ctx.moveTo(
+        0,
+        ((this.ymax - y) / (this.ymax - this.ymin)) * this.height,
+      );
+      this.ctx.lineTo(
+        5,
+        ((this.ymax - y) / (this.ymax - this.ymin)) * this.height,
+      );
       this.ctx.stroke();
     });
   }

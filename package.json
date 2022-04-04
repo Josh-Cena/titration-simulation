@@ -7,8 +7,8 @@
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "eslint --cache --report-unused-directives **/*.{js,ts,jsx,tsx}",
-    "format": "prettier --write *"
+    "lint": "eslint --cache --report-unused-disable-directives \"**/*.{js,ts,jsx,tsx}\"",
+    "format": "prettier --ignore-unknown --write *"
   },
   "dependencies": {
     "@types/react": "^17.0.43",
