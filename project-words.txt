@@ -1,0 +1,6 @@
+xmin
+xmax
+ymin
+ymax
+xticks
+yticks
